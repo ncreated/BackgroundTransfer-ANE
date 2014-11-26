@@ -1,0 +1,20 @@
+# Folders
+demo/out/
+demo/signing/
+temp/
+out/
+
+# Other files and folders
+.settings/
+
+# Intellij project files
+*.iws
+.idea
+*.iml
+
+# Xcode
+*xcuserdata
+*.a
+
+# Adobe Confidental
+FlashRuntimeExtensions.h

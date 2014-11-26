@@ -1,0 +1,316 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		544CF3A7192160E700C6564A /* BGT_DownloadTaskConfiguration.m in Sources */ = {isa = PBXBuildFile; fileRef = 544CF3A2192160E700C6564A /* BGT_DownloadTaskConfiguration.m */; };
+		544CF3A8192160E700C6564A /* BGT_NSRULSessionController.m in Sources */ = {isa = PBXBuildFile; fileRef = 544CF3A4192160E700C6564A /* BGT_NSRULSessionController.m */; };
+		544CF3A9192160E700C6564A /* NSObject+AssociatedObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 544CF3A6192160E700C6564A /* NSObject+AssociatedObject.m */; };
+		544CF3AB1921979E00C6564A /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 544CF3AA1921979E00C6564A /* UIKit.framework */; };
+		5471FF38190F1E0A0030D2E0 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5471FF37190F1E0A0030D2E0 /* Foundation.framework */; };
+		5471FF3F190F1E0A0030D2E0 /* BackgroundTransferANE.m in Sources */ = {isa = PBXBuildFile; fileRef = 5471FF3E190F1E0A0030D2E0 /* BackgroundTransferANE.m */; };
+		54933CE31930D6F3006CCE7E /* NSString+ANE.m in Sources */ = {isa = PBXBuildFile; fileRef = 54933CE21930D6F3006CCE7E /* NSString+ANE.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		5471FF32190F1E090030D2E0 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "include/$(PRODUCT_NAME)";
+			dstSubfolderSpec = 16;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		544CF3A1192160E700C6564A /* BGT_DownloadTaskConfiguration.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BGT_DownloadTaskConfiguration.h; sourceTree = "<group>"; };
+		544CF3A2192160E700C6564A /* BGT_DownloadTaskConfiguration.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BGT_DownloadTaskConfiguration.m; sourceTree = "<group>"; };
+		544CF3A3192160E700C6564A /* BGT_NSRULSessionController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BGT_NSRULSessionController.h; sourceTree = "<group>"; };
+		544CF3A4192160E700C6564A /* BGT_NSRULSessionController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BGT_NSRULSessionController.m; sourceTree = "<group>"; };
+		544CF3A5192160E700C6564A /* NSObject+AssociatedObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+AssociatedObject.h"; sourceTree = "<group>"; };
+		544CF3A6192160E700C6564A /* NSObject+AssociatedObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+AssociatedObject.m"; sourceTree = "<group>"; };
+		544CF3AA1921979E00C6564A /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		544CF3FB1930CEE800C6564A /* BGT_InternalMessages.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BGT_InternalMessages.h; sourceTree = "<group>"; };
+		5471FF34190F1E0A0030D2E0 /* libBackgroundTransferANE.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libBackgroundTransferANE.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		5471FF37190F1E0A0030D2E0 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		5471FF3B190F1E0A0030D2E0 /* BackgroundTransferANE-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "BackgroundTransferANE-Prefix.pch"; sourceTree = "<group>"; };
+		5471FF3E190F1E0A0030D2E0 /* BackgroundTransferANE.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BackgroundTransferANE.m; sourceTree = "<group>"; };
+		5471FF45190F1E0A0030D2E0 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+		5471FF48190F1E0A0030D2E0 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
+		5471FF5D190F1E730030D2E0 /* FlashRuntimeExtensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FlashRuntimeExtensions.h; sourceTree = "<group>"; };
+		54933CE11930D6F3006CCE7E /* NSString+ANE.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+ANE.h"; sourceTree = "<group>"; };
+		54933CE21930D6F3006CCE7E /* NSString+ANE.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+ANE.m"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		5471FF31190F1E090030D2E0 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				544CF3AB1921979E00C6564A /* UIKit.framework in Frameworks */,
+				5471FF38190F1E0A0030D2E0 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		5471FF2B190F1E090030D2E0 = {
+			isa = PBXGroup;
+			children = (
+				5471FF39190F1E0A0030D2E0 /* BackgroundTransferANE */,
+				5471FF36190F1E0A0030D2E0 /* Frameworks */,
+				5471FF35190F1E0A0030D2E0 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		5471FF35190F1E0A0030D2E0 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				5471FF34190F1E0A0030D2E0 /* libBackgroundTransferANE.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		5471FF36190F1E0A0030D2E0 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				544CF3AA1921979E00C6564A /* UIKit.framework */,
+				5471FF37190F1E0A0030D2E0 /* Foundation.framework */,
+				5471FF45190F1E0A0030D2E0 /* XCTest.framework */,
+				5471FF48190F1E0A0030D2E0 /* UIKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		5471FF39190F1E0A0030D2E0 /* BackgroundTransferANE */ = {
+			isa = PBXGroup;
+			children = (
+				5471FF3E190F1E0A0030D2E0 /* BackgroundTransferANE.m */,
+				544CF3FB1930CEE800C6564A /* BGT_InternalMessages.h */,
+				544CF3A1192160E700C6564A /* BGT_DownloadTaskConfiguration.h */,
+				544CF3A2192160E700C6564A /* BGT_DownloadTaskConfiguration.m */,
+				544CF3A3192160E700C6564A /* BGT_NSRULSessionController.h */,
+				544CF3A4192160E700C6564A /* BGT_NSRULSessionController.m */,
+				544CF3A5192160E700C6564A /* NSObject+AssociatedObject.h */,
+				544CF3A6192160E700C6564A /* NSObject+AssociatedObject.m */,
+				54933CE11930D6F3006CCE7E /* NSString+ANE.h */,
+				54933CE21930D6F3006CCE7E /* NSString+ANE.m */,
+				5471FF3A190F1E0A0030D2E0 /* Supporting Files */,
+			);
+			path = BackgroundTransferANE;
+			sourceTree = "<group>";
+		};
+		5471FF3A190F1E0A0030D2E0 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				5471FF5D190F1E730030D2E0 /* FlashRuntimeExtensions.h */,
+				5471FF3B190F1E0A0030D2E0 /* BackgroundTransferANE-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		5471FF33190F1E090030D2E0 /* BackgroundTransferANE */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5471FF57190F1E0A0030D2E0 /* Build configuration list for PBXNativeTarget "BackgroundTransferANE" */;
+			buildPhases = (
+				5471FF30190F1E090030D2E0 /* Sources */,
+				5471FF31190F1E090030D2E0 /* Frameworks */,
+				5471FF32190F1E090030D2E0 /* CopyFiles */,
+				544CF3AD1922E2E100C6564A /* ShellScript */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = BackgroundTransferANE;
+			productName = BackgroundTransferANE;
+			productReference = 5471FF34190F1E0A0030D2E0 /* libBackgroundTransferANE.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		5471FF2C190F1E090030D2E0 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0510;
+				ORGANIZATIONNAME = "Code Latte";
+			};
+			buildConfigurationList = 5471FF2F190F1E090030D2E0 /* Build configuration list for PBXProject "BackgroundTransferANE" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 5471FF2B190F1E090030D2E0;
+			productRefGroup = 5471FF35190F1E0A0030D2E0 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				5471FF33190F1E090030D2E0 /* BackgroundTransferANE */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		544CF3AD1922E2E100C6564A /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "mkdir -p \"$PROJECT_DIR/../../temp/ios/\"\ncp -v \"$BUILT_PRODUCTS_DIR/$EXECUTABLE_NAME\" \"$PROJECT_DIR/../../temp/ios/$EXECUTABLE_NAME\"";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		5471FF30190F1E090030D2E0 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				544CF3A9192160E700C6564A /* NSObject+AssociatedObject.m in Sources */,
+				5471FF3F190F1E0A0030D2E0 /* BackgroundTransferANE.m in Sources */,
+				54933CE31930D6F3006CCE7E /* NSString+ANE.m in Sources */,
+				544CF3A7192160E700C6564A /* BGT_DownloadTaskConfiguration.m in Sources */,
+				544CF3A8192160E700C6564A /* BGT_NSRULSessionController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		5471FF55190F1E0A0030D2E0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		5471FF56190F1E0A0030D2E0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		5471FF58190F1E0A0030D2E0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				DSTROOT = /tmp/BackgroundTransferANE.dst;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "BackgroundTransferANE/BackgroundTransferANE-Prefix.pch";
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		5471FF59190F1E0A0030D2E0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				DSTROOT = /tmp/BackgroundTransferANE.dst;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "BackgroundTransferANE/BackgroundTransferANE-Prefix.pch";
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		5471FF2F190F1E090030D2E0 /* Build configuration list for PBXProject "BackgroundTransferANE" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5471FF55190F1E0A0030D2E0 /* Debug */,
+				5471FF56190F1E0A0030D2E0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		5471FF57190F1E0A0030D2E0 /* Build configuration list for PBXNativeTarget "BackgroundTransferANE" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5471FF58190F1E0A0030D2E0 /* Debug */,
+				5471FF59190F1E0A0030D2E0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 5471FF2C190F1E090030D2E0 /* Project object */;
+}

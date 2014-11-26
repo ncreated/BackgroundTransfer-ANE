@@ -1,0 +1,87 @@
+<?xml version="1.0"?>
+<s:HGroup xmlns:fx="http://ns.adobe.com/mxml/2009" xmlns:s="library://ns.adobe.com/flex/spark"
+          currentState="NotStarted">
+    <s:states>
+        <s:State name="NotStarted"/>
+        <s:State name="Running"/>
+        <s:State name="Paused"/>
+        <s:State name="Success"/>
+        <s:State name="Error"/>
+    </s:states>
+
+    <s:Button label="{'DOWNLOAD '+downloadName}" includeIn="NotStarted" width="100%" height="100%"
+              click="downloadClicked(event)"/>
+
+    <s:HGroup includeIn="Running, Paused" width="100%" height="100%">
+        <s:Label id="progressLabel" text="0%" verticalAlign="middle" textAlign="center" width="30%" height="100%"/>
+        <s:Button label.Running="PAUSE" label.Paused="RESUME" width="40%" height="100%"
+                  click.Paused="resumeClicked(event)" click.Running="pauseClicked(event)"/>
+        <s:Button label="CANCEL" width="30%" height="100%" color="red" click="cancelClicked(event)"/>
+    </s:HGroup>
+
+    <s:Label text="SUCCESS!" includeIn="Success" width="100%" height="100%"/>
+
+    <s:Label id="errorLabel" text="ERROR" includeIn="Error" width="100%" height="100%"/>
+
+    <fx:Script>
+        <![CDATA[
+        import com.ncreated.ane.backgroundtransfer.BTDownloadTask;
+        import com.ncreated.ane.backgroundtransfer.BackgroundTransfer;
+
+        public var sessionID:String;
+        public var remoteURL:String;
+        public var localPath:String;
+
+        [Bindable]
+        public var downloadName:String;
+
+        private var _downloadTask:BTDownloadTask;
+
+        public function startDownloadTask(task:BTDownloadTask):void {
+            _downloadTask = task;
+            _downloadTask.addEventListener(ProgressEvent.PROGRESS, onDownloadTaskProgress, false, 0, true);
+            _downloadTask.addEventListener(Event.COMPLETE, onDownloadTaskCompleted, false, 0, true);
+            _downloadTask.addEventListener(ErrorEvent.ERROR, onDownloadTaskError, false, 0, true);
+            _downloadTask.resume();
+            currentState = "Running";
+        }
+
+        private function downloadClicked(event:MouseEvent):void {
+            startDownloadTask(BackgroundTransfer.instance.createDownloadTask(sessionID, remoteURL, localPath));
+        }
+
+        private function pauseClicked(event:MouseEvent):void {
+            _downloadTask.suspend();
+            currentState = "Paused";
+        }
+
+        private function resumeClicked(event:MouseEvent):void {
+            _downloadTask.resume();
+            currentState = "Running";
+        }
+
+        private function cancelClicked(event:MouseEvent):void {
+            _downloadTask.cancel();
+            currentState = "NotStarted"
+        }
+
+        private function onDownloadTaskProgress(event:ProgressEvent):void {
+            if (progressLabel) {
+                progressLabel.text = Math.round((event.bytesLoaded / event.bytesTotal) * 1000) / 10 + "%"
+            }
+        }
+
+        private function onDownloadTaskCompleted(event:Event):void {
+            currentState = "Success";
+        }
+
+        private function onDownloadTaskError(event:ErrorEvent):void {
+            currentState = "Error";
+
+            if (errorLabel) {
+                errorLabel.text = "ERROR: " + event.text;
+            }
+        }
+        ]]>
+    </fx:Script>
+</s:HGroup>

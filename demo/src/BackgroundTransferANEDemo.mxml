@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<s:ViewNavigatorApplication xmlns:fx="http://ns.adobe.com/mxml/2009" xmlns:s="library://ns.adobe.com/flex/spark"
+                            firstView="views.DownloadsView">
+
+    <s:titleContent>
+        <s:Label text="Background Transfer ANE demo" fontSize="12" fontWeight="bold" color="white"/>
+    </s:titleContent>
+
+</s:ViewNavigatorApplication>

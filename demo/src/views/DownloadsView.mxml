@@ -1,0 +1,72 @@
+<?xml version="1.0"?>
+<s:View xmlns:fx="http://ns.adobe.com/mxml/2009" xmlns:s="library://ns.adobe.com/flex/spark" xmlns:bt="views.*"
+        creationComplete="onCreated(event)">
+
+    <s:Scroller top="10" left="10" bottom="10" right="10">
+        <s:VGroup gap="10" paddingRight="10">
+            <s:TextArea id="logTextArea" width="100%" height="80" editable="false"/>
+            <bt:DownloadItem id="downloadItem1" width="100%" height="100"/>
+            <bt:DownloadItem id="downloadItem2" width="100%" height="100"/>
+            <bt:DownloadItem id="downloadItem3" width="100%" height="100"/>
+            <s:Button label="CRASH THE APP" color="red" click="onCrashClicked(event)"/>
+        </s:VGroup>
+    </s:Scroller>
+
+
+    <fx:Script><![CDATA[
+        import com.ncreated.ane.backgroundtransfer.BTDebugEvent;
+        import com.ncreated.ane.backgroundtransfer.BTDownloadTask;
+        import com.ncreated.ane.backgroundtransfer.BTSessionInitializedEvent;
+        import com.ncreated.ane.backgroundtransfer.BackgroundTransfer;
+
+        import mx.events.FlexEvent;
+
+        private const SESSION_ID:String = "my.session";
+
+        private function onCreated(event:FlexEvent):void {
+            BackgroundTransfer.instance.addEventListener(BTSessionInitializedEvent.INITIALIZED, onBackgroundSessionInitialized, false, 0, true);
+            BackgroundTransfer.instance.addEventListener(BTDebugEvent.INFO, onBackgroundSessionDebugInfo, false, 0, true);
+            BackgroundTransfer.instance.initializeSession(SESSION_ID);
+        }
+
+        private function onBackgroundSessionInitialized(event:BTSessionInitializedEvent):void {
+            logTextArea.text = "Background session initialized: " + event.sessionID + "\nRunning tasks: " + event.runningTasks.join(", ");
+
+            downloadItem1.sessionID = event.sessionID;
+            downloadItem1.remoteURL = "http://download.thinkbroadband.com/5MB.zip";
+            downloadItem1.localPath = File.documentsDirectory.resolvePath("downloads/5MB.zip").nativePath;
+            downloadItem1.downloadName = "5MB";
+
+            downloadItem2.sessionID = event.sessionID;
+            downloadItem2.remoteURL = "http://download.thinkbroadband.com/50MB.zip";
+            downloadItem2.localPath = File.documentsDirectory.resolvePath("downloads/50MB.zip").nativePath;
+            downloadItem2.downloadName = "50MB";
+
+            downloadItem3.sessionID = event.sessionID;
+            downloadItem3.remoteURL = "http://ipv4.download.thinkbroadband.com/512MB.zip";
+            downloadItem3.localPath = File.documentsDirectory.resolvePath("downloads/512MB.zip").nativePath;
+            downloadItem3.downloadName = "512MB";
+
+            // Configure UI for tasks already running in this background session (e.g. started before app crashed or
+            // was moved into "not running" state by os).
+            var items:Array = [downloadItem1, downloadItem2, downloadItem3];
+            for each (var runningTask:BTDownloadTask in event.runningTasks) {
+                for each (var item:DownloadItem in items) {
+                    if (item.sessionID == runningTask.sessionID && item.remoteURL == runningTask.remoteURL) {
+                        item.startDownloadTask(runningTask);
+                        break;
+                    }
+                }
+            }
+        }
+
+        private function onCrashClicked(event:Event):void {
+            BackgroundTransfer.instance.__crashTheApp();
+        }
+
+        private function onBackgroundSessionDebugInfo(event:BTDebugEvent):void {
+            logTextArea.text += "(" + (event.tag + ": " + event.message) + ")\n";
+        }
+        ]]>
+    </fx:Script>
+</s:View>
