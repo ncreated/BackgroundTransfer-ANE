@@ -16,7 +16,7 @@ Read more about multitasking in iOS: [NSURLSession and Background Transfer Servi
 
 Initialize `BackgroundTransfer` object:
 
-```   
+```javascript   
 BackgroundTransfer.instance.initializeSession(SESSION_ID);
 
 downloadTask = BackgroundTransfer.instance.createDownloadTask(sessionID, remoteURL, localPath);
@@ -29,7 +29,7 @@ downloadTask.resume();
 
 To continue download tasks that were interrupted (for instance, due to app crash) implement initialization event:
 
-```
+```javascript
 BackgroundTransfer.instance.addEventListener(BTSessionInitializedEvent.INITIALIZED, onBackgroundSessionInitialized, false, 0, true);
 
 private function onBackgroundSessionInitialized(event:BTSessionInitializedEvent):void {
