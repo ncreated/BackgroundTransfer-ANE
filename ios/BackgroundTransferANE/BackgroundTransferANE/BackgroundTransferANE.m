@@ -57,11 +57,6 @@ FREObject BGT_createDownloadTask(FREContext context, void* functionData, uint32_
     
     if (FREGetObjectAsUTF8(argv[2], &length, &localPathParam) == FRE_OK) {
         localPath = [NSString stringWithUTF8String:(char*)localPathParam];
-     
-        NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
-        NSString *documentsDirectory = [paths objectAtIndex:0];
-        
-        localPath = [documentsDirectory stringByAppendingPathComponent:localPath];
     }
     
     BGT_DownloadTaskConfiguration *configuration = [[BGT_DownloadTaskConfiguration alloc] initWithSessionID:sessionID remoteURL:remoteURL localPath:localPath];

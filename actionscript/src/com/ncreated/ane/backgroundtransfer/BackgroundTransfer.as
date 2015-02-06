@@ -42,11 +42,6 @@ public class BackgroundTransfer extends EventDispatcher {
     }
 
     public function createDownloadTask(session_id:String, remote_url:String, local_path:String):BTDownloadTask {
-        trace("Full local_path: " + local_path);
-        var documentsIndex:uint = local_path.indexOf("/Documents");
-        local_path = local_path.substr(documentsIndex + 10);
-        trace("Local path relative to Documents: " + local_path);
-
         var task:BTDownloadTask = new BTDownloadTask(session_id, remote_url, local_path);
 
         if (_downloadTasks[task.taskID]) {
