@@ -1,6 +1,6 @@
 <extension xmlns="http://ns.adobe.com/air/extension/4.0"> 
     <id>com.ncreated.ane.backgroundtransfer.BackgroundTransfer</id> 
-    <versionNumber>1</versionNumber> 
+    <versionNumber>1.1</versionNumber>
     <platforms> 
         <platform name="iPhone-ARM"> 
             <applicationDeployment> 

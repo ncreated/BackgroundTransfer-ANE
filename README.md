@@ -54,6 +54,12 @@ Add the `FlashRuntimeExtensions.h` file from the Adobe AIR SDK to the `ios/Backg
 Update the `build/ant-build.config` file in the build folder to match your Adobe AIR SDK setup.
 Run the ant build script `ant-build.xml`. This will compile and package the ANE. Binary files will be saved into `bin/` folder.
 
+## Changelog
+
+### version 1.1
+- file can be downloaded to any possible location on iOS (instead of limiting the location to `Documents` folder);
+- updated background session setup to not use deprecated APIs;
+
 ##License
 
 Default (not native) implementation of this ANE uses GreenSock LoaderMax for downloading files. `greensock.swc` library is subject to its own license. Please follow [https://greensock.com/licensing/]() for more details.
