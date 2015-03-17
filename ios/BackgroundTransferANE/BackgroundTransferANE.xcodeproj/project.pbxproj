@@ -266,7 +266,7 @@
 		5471FF58190F1E0A0030D2E0 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				ARCHS = "$(ARCHS_STANDARD)";
 				DSTROOT = /tmp/BackgroundTransferANE.dst;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "BackgroundTransferANE/BackgroundTransferANE-Prefix.pch";
@@ -279,7 +279,7 @@
 		5471FF59190F1E0A0030D2E0 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				ARCHS = "$(ARCHS_STANDARD)";
 				DSTROOT = /tmp/BackgroundTransferANE.dst;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "BackgroundTransferANE/BackgroundTransferANE-Prefix.pch";
